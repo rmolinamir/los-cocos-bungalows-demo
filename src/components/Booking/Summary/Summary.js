@@ -27,6 +27,10 @@ const summary = (props) => {
      */
     const bRoomsAreEqual = oldActiveRoom ? JSON.parse(oldActiveRoom).id === props.activeRoom.id : false;
     if (bRoomsAreEqual) { return; }
+    /**
+     * Normally I would also set an expiration date token using the Date constructor, but since this is a demo 
+     * I decided to leave that feature out.
+     */
     localStorage.setItem('activeRoom', JSON.stringify(props.activeRoom));
     toast.success('Room saved successfully! It will be loaded the next time you load the website.');
   }

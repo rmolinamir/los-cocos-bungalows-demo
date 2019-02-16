@@ -127,7 +127,7 @@ class Landing extends Component {
 
   render() {
     const calendar = (
-      <Modal show={this.state.isCalendarShown} toggleModal closeModal={() => this.setIsCalendarShown(false)}>
+      <Modal show={this.state.isCalendarShown} closeModal={() => this.setIsCalendarShown(false)}>
         <div className={classes.Calendar}>
           <Calendar
             activeStartDate={new Date(this.state.toDate.toLocaleDateString())}
@@ -207,6 +207,17 @@ class Landing extends Component {
             </div>
         </div>
         <div className={classes.Container}>
+          {/* Error handling, this is usally done on a HOC. */}
+          {this.state.error ? 
+            <Modal show={this.state.error} closeModal={() => this.setState({ error: false })}>
+              <div className={classes.Calendar}>
+                <h1 style={{ width: '80%' }}>We couldn't establish a connection to our servers. You may reload the page to try again.</h1>
+              </div>
+              <div className={classes.Confirm}>
+                <Button blockButton type='danger' clicked={() => this.setState({ error: false })}>Close</Button>
+              </div>
+            </Modal>
+            : null}
           <SearchBox.mobile className={classes.SearchBox} width='100%'>
             {searchBox}
           </SearchBox.mobile>
