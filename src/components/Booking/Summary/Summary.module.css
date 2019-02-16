@@ -1,0 +1,105 @@
+.Summary {
+  flex-grow: 1;
+  padding: 0 24px;
+  background-size: contain;
+  background-position: 0 150%;
+  background-repeat: no-repeat;
+}
+
+.Background {
+  position: relative;
+}
+
+.Background img {
+  top: -72px;
+  left: unset;
+  right: 0;
+  height: auto;
+  width: auto;
+  height: 72px;
+  object-fit: contain;
+}
+
+.Body {
+  position: sticky;
+  top: 24px;
+  padding: 16px 0;
+}
+
+.Table {
+  border: 0;
+  font-size: 14px
+}
+
+.Table th, .Table td {
+  line-height: 18px;
+}
+
+.Table th {
+  color: #484848;
+}
+
+.Table * {
+  padding: 3px 0;
+  text-align: left;
+}
+
+.Table th:first-child, .Table td:first-child {
+  padding-right: 24px;
+}
+
+.ReservationDate {
+  margin: 12px 0;
+  color: #484848;
+  line-height: 24px;
+  font-size: 14px
+}
+
+.Receipt, .Discount {
+  display: flex;
+  flex-flow: row;
+  width: 100%;
+  font-size: 18px;
+  color: #484848;
+}
+
+.Total, .Discount {
+  flex-grow: 1;
+  text-align: left;
+  text-transform: uppercase;
+  color: #484848;
+  font-weight: bold;
+  margin-bottom: 28px
+}
+
+.Discount {
+  font-size: 14px;
+  margin-bottom: 7px;
+}
+
+.Price, .Percentage {
+  flex-grow: 1;
+  text-align: right;
+  font-weight: bold;
+  color: #484848;
+}
+
+.Percentage {
+  font-size: 14px;
+  text-decoration: underline;
+}
+
+.OldPrice {
+  text-decoration: line-through;
+  font-weight: normal;
+  font-size: 13px;
+  text-align: right;
+}
+
+@media (max-width: 956px) {
+  .Summary {
+    order: -1;
+    padding: 0 !important;
+    margin-bottom: 36px;
+  }
+}

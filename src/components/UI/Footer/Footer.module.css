@@ -1,0 +1,161 @@
+.Footer {
+  padding: 6px 12px;
+  border-top: 1px solid #E0E0E0;
+  width: 87.5vw;
+  margin: 20px auto auto;
+}
+
+.FooterWrapper {
+  display: flex;
+  user-select: none;
+  position: relative;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.4;
+  text-align: center;
+  color:inherit;
+  z-index: 0;
+}
+
+@media (min-width: 720px) {
+  .MediaLinks {
+      display: table-cell;
+      height: 100%;
+      padding: 0 20px;
+  }
+}
+
+.LogoWrapper {
+  box-sizing: border-box;
+  vertical-align: baseline;
+  margin: auto 0;
+}
+
+.Logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 24px;
+  height: 24px;
+  background-color: #EEEEEE;
+  border-radius: 30px;
+  margin: 0 auto;
+  text-decoration: none;
+}
+
+.NavLinks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-end;
+  margin: 8px 0 6px;
+}
+
+.NavLinks .NavLink:nth-child(n+2):before {
+  content: '';
+  display: inline-block;
+  height: 12px;
+  width: 1px;
+  background-color: rgba(35,35,35,0.4);
+  margin: 0 15px;
+  pointer-events: none;
+  user-select: none;
+  cursor: none;
+}
+
+.NavLink {
+  font-size: inherit;
+  color: rgba(35,35,35,1);
+  text-decoration: none;
+  background: 0 0;
+  white-space: nowrap;
+  line-height: 1.4;
+  position: relative;
+  margin: 10px 0;
+}
+
+.active .Link:after {
+  color: rgb(0, 98, 179);
+  width: 100%;
+}
+
+.Link {
+  display: inline-flex;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.Link:after {
+  display: block;
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background: rgb(0, 98, 179);
+  transition: width ease-in 0.25s;
+}
+
+.Link:hover:after {
+  width: 100%;
+}
+
+.Contact {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-grow: 1;
+  margin: 8px 0 6px;
+}
+
+.Email, 
+.Phone {
+  font-size: inherit;
+  color: rgb(0, 98, 179);
+  text-decoration: none;
+  background: 0 0;
+  white-space: nowrap;
+  line-height: 1.4;
+  position: relative;
+  margin: 10px 0;
+  margin-left: 16px;
+}
+
+.MediaLink {
+    display: inline-block;
+    color: #FFF;
+    text-decoration: none;
+}
+
+.MediaLink svg {
+  width: 24px;
+  margin-left: 16px;
+}
+
+.MediaLink svg path {
+  fill: rgb(72,72,72);
+  transition: fill ease-out 0.1s;
+}
+
+.MediaLink:hover svg path {
+  fill: rgb(0, 98, 179);
+}
+
+@media (max-width: 1260px) {
+  .FooterWrapper {
+    flex-flow: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin-bottom: 36px;
+  }
+  .NavLinks, .Contact {
+    justify-content: center !important;
+  }
+  .Contact {
+    order: -1;
+  }
+}

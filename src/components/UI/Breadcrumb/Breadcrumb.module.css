@@ -1,0 +1,188 @@
+.Breadcrumb {
+  display: inline-flex;
+  position: relative;
+  flex-flow: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Progress Bar */
+.Breadcrumb:before,
+.Breadcrumb .Wrapper:before {
+  content: '';
+  width: 100%;
+  height: 1px;
+  background: #eeeeee;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 22px;
+  z-index:-1;
+}
+
+.Breadcrumb.Active:before {
+  background: rgb(0, 98, 179);
+}
+
+/* Wrapper */
+.Breadcrumb .Wrapper:first-child:after,
+.Breadcrumb .Wrapper:last-child:after {
+  display: block;
+  content: '';
+  border-radius: 50%;
+  width: 4px;
+  height: 4px;
+  background: rgb(0, 98, 179);
+  position: absolute;
+  z-index: 1;
+}
+
+.Breadcrumb .Wrapper:first-child:after {
+  left: 0;
+  top: 21px;
+}
+
+.Breadcrumb .Wrapper:last-child:after {
+  right: 0;
+  top: 21px;
+}
+
+.Wrapper {
+  position: relative;
+  list-style: none;
+  /* Flex-grow 1 is very important, this extends the progress bar */
+  flex-grow: 1; 
+}
+
+
+.Breadcrumb .Wrapper.Active:before {
+  left: 0;
+  background: rgb(0, 98, 179);
+  color: rgb(0, 98, 179);
+}
+
+.Container {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Active .Step {
+  border: 1px solid rgb(0, 98, 179);
+  color: rgb(0, 98, 179);
+}
+
+.Step {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  border-radius: 50%;
+  padding: 12px;
+  margin: 0 0 12px;
+  width: 44px;
+  height: 44px;
+  background-color: #FFF;
+  font-size: 21px;
+  font-weight: bold;
+  border: 1px solid #c8c8c8;
+  color: #c8c8c8;
+}
+.Active .Details {
+  color: #484848;
+  user-select: text;
+}
+
+.Details {
+  user-select: none;
+  color: #c8c8c8;
+  font-weight: bold;
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+/* 
+.Breadcrumb{
+  margin-bottom: 30px;
+  overflow: hidden;
+  CSS counters to number the steps
+  counter-reset: step;
+  width:100%;
+  padding:0px;
+  margin:0px;
+}
+
+.Breadcrumb .Step {
+  list-style-type: none;
+  color: #FFF;
+  font-size: 14px;
+  width: 15%;
+  float: left;
+  position: relative;
+  text-align:center;
+
+  
+  user-select: none;
+  color: #c8c8c8;
+  font-weight: bold;
+}
+.Breadcrumb .Step  div{
+  font-size: 14px;
+  color:#c8c8c8;
+}
+.Breadcrumb .Step:before {
+  content: counter(step);
+  counter-increment: step;
+  margin: 0 auto 12px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  font-size: 21px;
+  font-weight: bold;
+  background: #FFF;
+  border: 1px solid #c8c8c8;
+  color: #c8c8c8;
+}
+progressbar connectors
+.Breadcrumb .Step:after {
+  content: '';
+  width: 100%;
+  height: 1px;
+  background: #eeeeee;
+  position: absolute;
+  left: -50%;
+  top: 20px;
+  z-index:-1
+}
+.Breadcrumb .Step:first-child:after {
+  connector not needed before the first step
+  content: none;
+}
+marking Active/completed steps green
+The number of the step and the connector before it = green
+.Breadcrumb .Step.Active:before,  
+.Breadcrumb .Step.Active:after{
+  background: rgb(0, 98, 179);
+  color: rgb(0, 98, 179);
+}
+
+.Breadcrumb .Step.Active:before {
+  background: #FFF;
+  color: rgb(0, 98, 179);
+  border: 1px solid rgb(0, 98, 179); 
+}  
+
+.Breadcrumb .Step.Active div{
+  color:#484848;
+} 
+ */

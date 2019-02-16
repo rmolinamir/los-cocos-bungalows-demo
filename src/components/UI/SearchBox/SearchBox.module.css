@@ -1,0 +1,38 @@
+.Widescreen {
+    display: none;
+}
+
+.Mobile {
+    display: block;
+    width: 100%;
+    background-color: transparent;
+    max-width: 360px;
+    margin: 0 auto;
+}
+
+@media (min-width: 744px) {
+    .Widescreen {
+        display: block;
+    }
+
+    .Mobile {
+        display: none;
+    }
+}
+
+.SearchBox {
+  background: inherit;
+  color: #484848;
+  padding: 16px 0;
+  margin: auto;
+  box-shadow: none;
+  width: auto;
+}
+
+@media (min-width: 960px) {
+  .SearchBox {
+    padding: 32px;
+    margin: 0;
+    box-shadow: 0 16px 40px rgba(0,0,0,0.12);
+  }
+}

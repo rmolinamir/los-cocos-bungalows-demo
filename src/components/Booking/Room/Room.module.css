@@ -1,0 +1,184 @@
+.Wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  min-height: 250px;
+  padding: 18px 24px;
+  background-color: #FEFEFE;
+  border: 1px solid rgba(220, 53, 69, .25);
+  transition: box-shadow ease 200ms;
+}
+
+@media (max-width: 956px) {
+
+    /* Image CSS */
+    .Wrapper:hover .Image img {
+      transform: scale(1) !important;
+    }
+
+    .Thumbnail {
+      position: relative;
+      height: 33vh !important;
+      min-width: 100%;
+      margin: 0 12px 24px;
+    }
+
+    .Image {
+      width: 100% !important;
+    }
+
+    .Image img {
+      left: -24px !important;
+      border-radius: 6px;
+      object-fit: cover;
+      transform: scale(1);
+      transition: transform ease 200ms;
+    }
+
+    .Wrapper:hover .Image img {
+      transform: scale(1) !important;
+    }
+
+    .Thumbnail {
+      position: relative;
+      height: 33vh !important;
+      min-width: 100%;
+      margin: 0 12px 24px;
+    }
+}
+
+@media (max-width: 688px) {
+    .Wrapper {
+      flex-flow: column;
+      padding: 6px 0px;
+      margin: 0 0 36px;
+      padding-top: 18px;
+    }
+    .Wrapper:hover {
+      border: 1px solid rgba(220, 53, 69, .25) !important;
+    }
+
+    /* Room details CSS */
+    .Container {
+      padding-bottom: 12px;
+    }
+
+    .Details {
+      padding-bottom: 24px;
+    }
+
+    /* Image CSS */
+    .Image img {
+      left: 0 !important;
+      border-radius: 6px;
+      object-fit: cover;
+      transform: scale(1);
+      transition: transform ease 200ms;
+    }
+
+    .Image {
+      width: 100% !important;
+    }
+
+    .Image img {
+      left: 0 !important;
+      border-radius: 6px;
+      object-fit: cover;
+      transform: scale(1);
+      transition: transform ease 200ms;
+    }
+}
+
+.Wrapper:hover {
+  box-shadow: 0px 0px 2px 1px rgba(220, 53, 69, 0.33);
+}
+
+.Wrapper:hover .Image img {
+  transform: scale(1.05)
+}
+
+.Thumbnail {
+  position: relative;
+  height: auto;
+  min-width: 33%;
+}
+
+.Image {
+  height: 100%;
+  width: 100%;
+  width: calc(100% + 32px);
+}
+
+.Image img {
+  left: -42px;
+  border-radius: 6px;
+  object-fit: cover;
+  transform: scale(1);
+  transition: transform ease 200ms;
+}
+
+.Container {
+  margin: 0 12px;
+  flex-grow: 1;
+  display: flex;
+  flex-flow: column;
+}
+
+.Spacing {
+  flex-grow: 1;
+}
+
+.Title {
+  color: #484848;
+  font-weight: bold;
+  text-transform: capitalize;
+  margin-bottom: 8px;
+}
+
+.Description {
+  font-size: 14px;
+  color: #484848;
+  font-weight: normal;
+  margin-bottom: 16px;
+}
+
+.Size {
+  font-size: 14px;
+  color: #484848;
+  font-weight: normal;
+  flex-grow: 1;
+}
+
+.Details {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.Beds {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-flow: column;
+}
+
+.Beds,
+.People,
+.Price {
+  font-size: 14px;
+  color: #484848;
+  font-weight: normal;
+}
+
+.OldPrice {
+  text-decoration: line-through;
+  font-weight: normal;
+  font-size: 13px;
+  text-align: right;
+}
+
+.Price {
+  font-size: 18px;
+  font-weight: bold;
+}
